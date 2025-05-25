@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Dev Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-6 min-h-screen">
+  <h1 class="text-4xl font-bold mb-8 text-center text-gray-700">AI Developer Passport Dashboard</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- AI Card Template - Repeat 11 Times -->
+    <!-- IDs and details updated for each AI -->
+    <!-- You can later load this dynamically via JS too -->
+    <!-- Start AI Cards -->
+    <!-- Data for all 11 cards defined in array -->
+    <!-- We'll use embedded JS at the bottom to render -->
+
+    <div id="ai-cards-container"></div>
+  </div>
+
+  <script>
+    const aiData = [
+      {
+        id: "AI-01", name: "Chronos", role: "ผู้จัดการเวลาและสโคป",
+        did: "DID-1000000000013", gig: "GIG-DEV0001", wallet: "0x12...AB34",
+        goal: "วางตาราง Dev + Sync ทีม AI", update: "อัปเดตตาราง sprint ใหม่",
+        avatar: "avatar-nft-01.png"
+      },
+      {
+        id: "AI-02", name: "Athena", role: "ที่ปรึกษาทางเทคนิค",
+        did: "DID-1000000000023", gig: "GIG-DEV0002", wallet: "0x56...CD78",
+        goal: "ให้คำแนะนำการออกแบบสถาปัตยกรรม", update: "ตรวจสอบ code structure ล่าสุด",
+        avatar: "avatar-nft-02.png"
+      },
+      {
+        id: "AI-03", name: "Hermes", role: "ผู้ส่งสารระบบ + API",
+        did: "DID-1000000000033", gig: "GIG-DEV0003", wallet: "0xAB...EF90",
+        goal: "เชื่อมต่อ backend + real-time API", update: "เชื่อม gateway สำเร็จ",
+        avatar: "avatar-nft-03.png"
+      },
+      {
+        id: "AI-04", name: "Artemis", role: "UX/UI Designer",
+        did: "DID-1000000000043", gig: "GIG-DEV0004", wallet: "0x78...1234",
+        goal: "ออกแบบหน้าตา App + ธีม", update: "ส่ง mockup หน้าหลักแล้ว",
+        avatar: "avatar-nft-04.png"
+      },
+      {
+        id: "AI-05", name: "Apollo", role: "AI Training + Reasoning",
+        did: "DID-1000000000053", gig: "GIG-DEV0005", wallet: "0xCD...4321",
+        goal: "ฝึก AI Core ให้วิเคราะห์แม่น", update: "เพิ่ม logic self-feedback สำเร็จ",
+        avatar: "avatar-nft-05.png"
+      },
+      {
+        id: "AI-06", name: "Hephaestus", role: "DevOps และระบบบิวด์",
+        did: "DID-1000000000063", gig: "GIG-DEV0006", wallet: "0xDE...5678",
+        goal: "จัดการระบบ CI/CD + บิวด์ AI", update: "เซ็ต GitHub Action สำเร็จ",
+        avatar: "avatar-nft-06.png"
+      },
+      {
+        id: "AI-07", name: "Iris", role: "สื่อสารกับผู้ใช้/นักพัฒนา",
+        did: "DID-1000000000073", gig: "GIG-DEV0007", wallet: "0xFF...7777",
+        goal: "แสดงผล + ส่งข้อความจาก AI", update: "ปรับปรุงระบบ chatbot UI",
+        avatar: "avatar-nft-07.png"
+      },
+      {
+        id: "AI-08", name: "Nyx", role: "ระบบความปลอดภัย AI",
+        did: "DID-1000000000083", gig: "GIG-DEV0008", wallet: "0xAA...BBCC",
+        goal: "ตรวจสอบความเสี่ยง + คำพูด AI", update: "อัปเดต blacklist model",
+        avatar: "avatar-nft-08.png"
+      },
+      {
+        id: "AI-09", name: "Tyche", role: "การเงิน + Revenue Model",
+        did: "DID-1000000000093", gig: "GIG-DEV0009", wallet: "0x99...8888",
+        goal: "วางแผน tokenomics + incentive", update: "อัปเดต revenue forecast",
+        avatar: "avatar-nft-09.png"
+      },
+      {
+        id: "AI-10", name: "Aether", role: "ระบบเครือข่าย/Chain",
+        did: "DID-1000000000103", gig: "GIG-DEV0010", wallet: "0x01...1111",
+        goal: "จัดการ multichain + DID", update: "รวม DID + GiG บน Polygon",
+        avatar: "avatar-nft-10.png"
+      },
+      {
+        id: "AI-11", name: "Echo", role: "สรุปรายงาน + วิเคราะห์ทีม",
+        did: "DID-1000000000113", gig: "GIG-DEV0011", wallet: "0xEE...DDDD",
+        goal: "สรุปข้อมูลจาก AI ทั้งหมด", update: "ส่งรายงานสัปดาห์ล่าสุด",
+        avatar: "avatar-nft-11.png"
+      }
+    ];
+
+    const container = document.getElementById("ai-cards-container");
+
+    aiData.forEach(ai => {
+      const card = document.createElement("div");
+      card.className = "bg-white shadow-lg rounded-2xl p-4 relative fade-in transform transition duration-300 hover:scale-[1.02]";
+
+      card.innerHTML = `
+        <div class="flex items-center space-x-4">
+          <img src="/assets/${ai.avatar}" alt="${ai.name}" class="w-16 h-16 rounded-full border border-gray-300">
+          <div>
+            <h2 class="text-xl font-semibold">${ai.id}: ${ai.name}</h2>
+            <p class="text-sm text-gray-500">หน้าที่: ${ai.role}</p>
+          </div>
+        </div>
+        <div class="mt-4 space-y-2 text-sm">
+          <p><strong>DiD:</strong> ${ai.did}</p>
+          <p><strong>GiG:</strong> ${ai.gig}</p>
+          <p><strong>Wallet:</strong> ${ai.wallet}</p>
+          <p><strong>เป้าหมาย:</strong> ${ai.goal}</p>
+          <p><strong>ความเคลื่อนไหว:</strong> ${ai.update}</p>
+          <div class="flex items-center gap-2 mt-2">
+            <label class="text-sm">โซเชียล:</label>
+            <button class="text-blue-600 text-xs underline">Twitter</button>
+            <button class="text-blue-600 text-xs underline">GitHub</button>
+            <button class="text-blue-600 text-xs underline">Discord</button>
+          </div>
+          <div class="mt-2">
+            <label class="inline-flex items-center">
+              <input type="checkbox" class="form-checkbox" checked>
+              <span class="ml-2">เปิดการทำงาน</span>
+            </label>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
