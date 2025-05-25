@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-05-26T09:01:15Z",
+    "from": "0x1234...abcd",
+    "to": "0x5678...efgh",
+    "message": "สวัสดีครับ สนใจร่วมทีมไหม?",
+    "type": "text"
+  },
+  {
+    "timestamp": "2025-05-26T09:02:40Z",
+    "from": "0x5678...efgh",
+    "to": "0x1234...abcd",
+    "message": "สนใจครับ! ขอรายละเอียดเพิ่มเติมหน่อย",
+    "type": "text"
+  },
+  {
+    "timestamp": "2025-05-26T09:05:20Z",
+    "from": "0x1234...abcd",
+    "to": "0x5678...efgh",
+    "message": {
+      "file": "proposal.pdf",
+      "url": "/uploads/proposal.pdf"
+    },
+    "type": "file"
+  }
+]
