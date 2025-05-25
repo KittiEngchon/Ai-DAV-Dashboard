@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+  <div id="profile" class="max-w-xl mx-auto bg-white shadow-lg rounded-xl p-6"></div>
+
+  <script>
+    async function loadProfile() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      const res = await fetch('/data/ai-profiles.json');
+      const profiles = await res.json();
+      const ai = profiles.find(p => p.id === id);
+
+      if (!ai) {
+        document.getElementById('profile').innerHTML = `<p class="text-red-600">AI profile not found</p>`;
+        return;
+      }
+
+      document.getElementById('profile').innerHTML = `
+        <div class="flex items-center gap-4">
+          <img src="${ai.avatar}" class="w-24 h-24 rounded-full border" />
+          <div>
+            <h2 class="text-2xl font-bold">${ai.name} (${ai.id})</h2>
+            <p class="text-sm text-gray-500">${ai.role}</p>
+          </div>
+        </div>
+        <div class="mt-4 space-y-2">
+          <p><strong>DiD:</strong> ${ai.did}</p>
+          <p><strong>GiG:</strong> ${ai.gig}</p>
+          <p><strong>Wallet:</strong> ${ai.wallet}</p>
+          <p><strong>เป้าหมาย:</strong> ${ai.goal}</p>
+          <p><strong>ความเคลื่อนไหว:</strong> ${ai.activity}</p>
+        </div>
+      `;
+    }
+
+    loadProfile();
+  </script>
+</body>
+</html>
