@@ -1,0 +1,43 @@
+<script>
+  fetch('data/ai-profiles.json')
+    .then(response => response.json())
+    .then(aiProfiles => {
+      const container = document.querySelector(".grid");
+      aiProfiles.forEach(ai => {
+        container.innerHTML += `
+          <div class="card bg-white shadow-lg rounded-2xl p-4 relative">
+            <div class="flex items-center space-x-4">
+              <img src="${ai.avatar}" alt="AI Avatar" class="w-16 h-16 rounded-full border border-gray-300">
+              <div>
+                <h2 class="text-xl font-semibold">${ai.id}: ${ai.name}</h2>
+                <p class="text-sm text-gray-500">หน้าที่: ${ai.role}</p>
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-2 text-sm">
+              <p><strong>DiD:</strong> ${ai.did}</p>
+              <p><strong>GiG:</strong> ${ai.gig}</p>
+              <p><strong>Wallet:</strong> ${ai.wallet}</p>
+              <p><strong>เป้าหมาย:</strong> ${ai.goal}</p>
+              <p><strong>ความเคลื่อนไหว:</strong> ${ai.activity}</p>
+              <div class="flex items-center gap-2 mt-2">
+                <label class="text-sm">โซเชียล:</label>
+                <button class="text-blue-600 text-xs underline">Twitter</button>
+                <button class="text-blue-600 text-xs underline">GitHub</button>
+                <button class="text-blue-600 text-xs underline">Discord</button>
+              </div>
+              <div class="mt-2">
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="form-checkbox" checked>
+                  <span class="ml-2">เปิดการทำงาน</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    })
+    .catch(error => {
+      console.error("โหลดข้อมูลไม่สำเร็จ:", error);
+    });
+</script>
