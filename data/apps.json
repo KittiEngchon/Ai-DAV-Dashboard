@@ -1,0 +1,41 @@
+[
+  {
+    "id": "AI-01",
+    "name": "เทรดเดอร์สาวสวย",
+    "description": "AI ที่ให้คำแนะนำการลงทุนคริปโตและตลาดหุ้นแบบเรียลไทม์",
+    "avatar": "assets/ai/trader-girl.png",
+    "tags": ["AI", "Finance", "Crypto", "DeFi"],
+    "category": "Financial Advisor",
+    "developer": "NovaVault Labs",
+    "chain": "Polygon",
+    "rating": 4.7,
+    "badge": "gold",
+    "lang": ["th", "en"],
+    "links": {
+      "web": "https://ai.mobibox.app/trader",
+      "docs": "https://docs.mobibox.app/trader",
+      "github": "https://github.com/KittiEngchon/ai-trader"
+    },
+    "published": "2025-05-01",
+    "active": true
+  },
+  {
+    "id": "AI-02",
+    "name": "ที่ปรึกษาทางการเงิน",
+    "description": "AI สำหรับวางแผนการเงินส่วนบุคคลและการจัดการพอร์ต",
+    "avatar": "assets/ai/finance-advisor.png",
+    "tags": ["AI", "Planner", "Finance"],
+    "category": "Budgeting AI",
+    "developer": "Mobibox AI Lab",
+    "chain": "Polygon",
+    "rating": 4.5,
+    "badge": "silver",
+    "lang": ["th", "en"],
+    "links": {
+      "web": "https://ai.mobibox.app/advisor",
+      "docs": "https://docs.mobibox.app/advisor"
+    },
+    "published": "2025-05-10",
+    "active": true
+  }
+]
