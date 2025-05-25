@@ -1,0 +1,26 @@
+[
+  {
+    "chainId": 137,
+    "name": "Polygon",
+    "symbol": "MATIC",
+    "rpc": "https://polygon-rpc.com",
+    "explorer": "https://polygonscan.com",
+    "nativeCurrency": {
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": 18
+    }
+  },
+  {
+    "chainId": 1,
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "rpc": "https://mainnet.infura.io/v3/YOUR_INFURA_KEY",
+    "explorer": "https://etherscan.io",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  }
+]
