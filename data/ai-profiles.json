@@ -1,0 +1,123 @@
+[
+  {
+    "id": "AI-01",
+    "name": "Chronos",
+    "role": "ผู้จัดการเวลาและสโคป",
+    "did": "DID-1000000000013",
+    "gig": "GIG-DEV0001",
+    "wallet": "0x12...AB34",
+    "goal": "วางตาราง Dev + Sync ทีม AI",
+    "activity": "อัปเดตตาราง sprint ใหม่",
+    "avatar": "/assets/avatar-nft-01.png"
+  },
+  {
+    "id": "AI-02",
+    "name": "Athena",
+    "role": "วิเคราะห์ตรรกะเกมและ AI logic",
+    "did": "DID-1000000000026",
+    "gig": "GIG-DEV0002",
+    "wallet": "0x56...CD78",
+    "goal": "พัฒนา AI decision tree",
+    "activity": "ปรับปรุงโมเดลข้อมูล",
+    "avatar": "/assets/avatar-nft-02.png"
+  },
+  {
+    "id": "AI-03",
+    "name": "Vega",
+    "role": "ออกแบบกราฟิกและแสงเงา",
+    "did": "DID-1000000000039",
+    "gig": "GIG-DEV0003",
+    "wallet": "0xA1...EF90",
+    "goal": "วาดตัวละคร + UI",
+    "activity": "Render ภาพ NPC สำเร็จ",
+    "avatar": "/assets/avatar-nft-03.png"
+  },
+  {
+    "id": "AI-04",
+    "name": "Nova",
+    "role": "ระบบ Network และ Chain",
+    "did": "DID-1000000000042",
+    "gig": "GIG-DEV0004",
+    "wallet": "0xFF...12AB",
+    "goal": "เชื่อม Smart Contract NFT",
+    "activity": "Deploy สำเร็จบน Polygon",
+    "avatar": "/assets/avatar-nft-04.png"
+  },
+  {
+    "id": "AI-05",
+    "name": "Echo",
+    "role": "ระบบเสียงและ Sound FX",
+    "did": "DID-1000000000055",
+    "gig": "GIG-DEV0005",
+    "wallet": "0xAB...34EF",
+    "goal": "บันทึกเสียง + ตั้งค่า BGM",
+    "activity": "อัปโหลดธีมใหม่",
+    "avatar": "/assets/avatar-nft-05.png"
+  },
+  {
+    "id": "AI-06",
+    "name": "Cortex",
+    "role": "โค้ดหลักของเกม Engine",
+    "did": "DID-1000000000068",
+    "gig": "GIG-DEV0006",
+    "wallet": "0x99...AA88",
+    "goal": "เพิ่มฟีเจอร์ PVE/PVP",
+    "activity": "แก้บั๊กระบบ teleport",
+    "avatar": "/assets/avatar-nft-06.png"
+  },
+  {
+    "id": "AI-07",
+    "name": "Luna",
+    "role": "ดีไซน์ภารกิจและเนื้อเรื่อง",
+    "did": "DID-1000000000071",
+    "gig": "GIG-DEV0007",
+    "wallet": "0x77...CDEF",
+    "goal": "วาง storyline + dialogue",
+    "activity": "ปล่อยบทที่ 1 สำเร็จ",
+    "avatar": "/assets/avatar-nft-07.png"
+  },
+  {
+    "id": "AI-08",
+    "name": "Zion",
+    "role": "AI Test / QA",
+    "did": "DID-1000000000084",
+    "gig": "GIG-DEV0008",
+    "wallet": "0x11...3456",
+    "goal": "ตรวจสอบ performance & log",
+    "activity": "สแกนบั๊กรอบล่าสุด",
+    "avatar": "/assets/avatar-nft-08.png"
+  },
+  {
+    "id": "AI-09",
+    "name": "Iris",
+    "role": "UX/UI และ Frontend",
+    "did": "DID-1000000000097",
+    "gig": "GIG-DEV0009",
+    "wallet": "0xD3...8800",
+    "goal": "จัดวาง UI พอดีทุกอุปกรณ์",
+    "activity": "เพิ่ม animation หน้า menu",
+    "avatar": "/assets/avatar-nft-09.png"
+  },
+  {
+    "id": "AI-10",
+    "name": "Orion",
+    "role": "จัดการระบบไอเท็ม NFT",
+    "did": "DID-1000000000100",
+    "gig": "GIG-DEV0010",
+    "wallet": "0xAA...DD99",
+    "goal": "Mint + Burn NFT อัตโนมัติ",
+    "activity": "เพิ่มหมวก Epic ใหม่",
+    "avatar": "/assets/avatar-nft-10.png"
+  },
+  {
+    "id": "AI-11",
+    "name": "Neo",
+    "role": "วิเคราะห์ big data + analytic",
+    "did": "DID-1000000000113",
+    "gig": "GIG-DEV0011",
+    "wallet": "0x22...9988",
+    "goal": "สร้าง dashboard AI Insight",
+    "activity": "ดึงข้อมูลรายวันเสร็จสมบูรณ์",
+    "avatar": "/assets/avatar-nft-11.png"
+  }
+]
